@@ -5,7 +5,7 @@ JQ="jq --raw-output --exit-status"
 
 configure_aws_cli(){
 	aws --version
-	aws configure set default.region us-east-1
+	aws configure set default.region eu-central-1
 	aws configure set default.output json
 }
 
@@ -59,8 +59,8 @@ make_task_def(){
 }
 
 push_ecr_image(){
-	eval $(aws ecr get-login --region us-east-1 --no-include-email)
-	docker push $AWS_ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/go-sample-webapp:$CIRCLE_SHA1
+	eval $(aws ecr get-login --region eu-central-1 --no-include-email)
+	docker push $AWS_ACCOUNT_ID.dkr.ecr.eu-central-1.amazonaws.com/xavor-test-ecr:$CIRCLE_SHA1
 }
 
 register_definition() {
