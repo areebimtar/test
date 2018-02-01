@@ -41,8 +41,8 @@ deploy_cluster() {
 make_task_def(){
 	task_template='[
 		{
-			"name": "go-sample-webapp",
-			"image": "%s.dkr.ecr.us-east-1.amazonaws.com/go-sample-webapp:%s",
+			"name": "xavor-test-ecr",
+			"image": "%s.dkr.ecr.eu-central-1.amazonaws.com/xavor-test-ecr:%s",
 			"essential": true,
 			"memory": 200,
 			"cpu": 10,
