@@ -60,7 +60,7 @@ make_task_def(){
 
 push_ecr_image(){
 	eval $(aws ecr get-login --region eu-central-1 --no-include-email)
-	docker push $AWS_ACCOUNT_ID.dkr.ecr.eu-central-1.amazonaws.com/xavor-test-ecr:$CIRCLE_SHA1
+	docker push $862392389649.dkr.ecr.eu-central-1.amazonaws.com/xavor-test-ecr:$CIRCLE_SHA1
 }
 
 register_definition() {
