@@ -8,7 +8,7 @@ dependencies:
 
 test:
   post:
-    - docker run -d -p 8080:80 --name xavor-test-ecr 862392389649.dkr.ecr.eu-central-1.amazonaws.com/xavor-test-ecr:$CIRCLE_SHA1; sleep 10
+    - docker run -d -p 80:8080 --name xavor-test-ecr 862392389649.dkr.ecr.eu-central-1.amazonaws.com/xavor-test-ecr:$CIRCLE_SHA1; sleep 10
     - curl --retry 10 --retry-delay 5 localhost:80 | grep "Hello World!"
 
 deployment:
