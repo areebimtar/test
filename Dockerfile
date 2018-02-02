@@ -2,6 +2,6 @@
 FROM ubuntu:14.04
 
 COPY ./test /opt/
-EXPOSE 8080
+EXPOSE 8001
 
 ENTRYPOINT ["/opt/test"]
